@@ -1,11 +1,11 @@
 # dsh-pet 🐾
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/dsh-pet"><img alt="npm version" src="https://img.shields.io/npm/v/dsh-pet?label=npm&color=blue"></a>
-  <a href="https://www.npmjs.com/package/dsh-pet"><img alt="npm monthly downloads" src="https://img.shields.io/npm/dm/dsh-pet?label=%E6%9C%88%E4%B8%8B%E8%BD%BD&color=brightgreen"></a>
-  <a href="https://www.npmjs.com/package/dsh-pet"><img alt="total downloads" src="https://img.shields.io/npm/dt/dsh-pet?label=%E6%80%BB%E4%B8%8B%E8%BD%BD&color=success"></a>
-  <a href="https://github.com/PC2005-cloud/dsh-pet"><img alt="stars" src="https://img.shields.io/github/stars/PC2005-cloud/dsh-pet?style=social"></a>
-  <a href="https://github.com/PC2005-cloud/dsh-pet/blob/main/LICENSE"><img alt="license" src="https://img.shields.io/github/license/PC2005-cloud/dsh-pet?color=orange"></a>
+  <a href="https://www.npmjs.com/package/@btsd321/dsh-pet"><img alt="npm version" src="https://img.shields.io/npm/v/@btsd321/dsh-pet?label=npm&color=blue"></a>
+  <a href="https://www.npmjs.com/package/@btsd321/dsh-pet"><img alt="npm monthly downloads" src="https://img.shields.io/npm/dm/@btsd321/dsh-pet?label=%E6%9C%88%E4%B8%8B%E8%BD%BD&color=brightgreen"></a>
+  <a href="https://www.npmjs.com/package/@btsd321/dsh-pet"><img alt="total downloads" src="https://img.shields.io/npm/dt/@btsd321/dsh-pet?label=%E6%80%BB%E4%B8%8B%E8%BD%BD&color=success"></a>
+  <a href="https://github.com/btsd321/dsh-pet"><img alt="stars" src="https://img.shields.io/github/stars/btsd321/dsh-pet?style=social"></a>
+  <a href="https://github.com/btsd321/dsh-pet/blob/main/LICENSE"><img alt="license" src="https://img.shields.io/github/license/btsd321/dsh-pet?color=orange"></a>
   <a href="https://awesome-dsh-plugin.com"><img alt="awesome dsh plugin" src="https://awesome-dsh-plugin.com/badge.svg"></a>
   <img alt="platform" src="https://img.shields.io/badge/platform-DeepSeek%20Harness%20Web-8A2BE2">
   <img alt="assets" src="https://img.shields.io/badge/assets-dynamic%20animations-ff69b4">
@@ -19,20 +19,20 @@
 ## 🚀 快速开始（安装插件）
 
 ```sh
-dsh plugin --profile web add dsh-pet
+dsh plugin --profile web add @btsd321/dsh-pet
 ```
 
 重启 `dsh web`，宠物出现在界面右上角（默认配置角落，可在设置页修改）——全部透明动画开箱即用，无需任何生成流程。
 
 > 💡 单一格式（默认 `.webm`）：浏览器 Chrome/Edge/Firefox 与桌面模式（Electron=Chromium）直接透明播放；Safari 不认 webm alpha（黑底），macOS 需要改用 `.mov`，见下方「🖥️ macOS 使用 mov」。
 
-> 💡 想自己造一只专属宠物？克隆 [PC2005-cloud/dsh-pet](https://github.com/PC2005-cloud/dsh-pet) 仓库，用内置素材链（AI 提示词 → 绿幕视频 → 透明动画，素材由豆包生成）从零生成，全流程可复现。
+> 💡 想自己造一只专属宠物？克隆 [btsd321/dsh-pet](https://github.com/btsd321/dsh-pet) 仓库，用内置素材链（AI 提示词 → 绿幕视频 → 透明动画，素材由豆包生成）从零生成，全流程可复现。
 
 ## 🖥️ macOS 使用 mov（Safari 透明播放）
 
 macOS 的 Safari/WKWebView 下透明动画需用 `.mov` 素材，三步：
 
-1. **下载 mov 素材**：<https://github.com/PC2005-cloud/dsh-pet/releases/tag/assets-mov>（保持最新，zip 解压后文件名与 webm 一一对应）
+1. **下载 mov 素材**：<https://github.com/btsd321/dsh-pet/releases/tag/assets-mov>（保持最新，zip 解压后文件名与 webm 一一对应）
 2. **放入素材目录**：把 `.mov` 文件放进 `$DSH_HOME/dsh-pet/main-animation/mov/`（pet pack 宠物则是 `pet/<种类名>-animation/mov/`）
 3. **改变量**：搜 `ANIMATION_EXT`，把 `.webm` 改为 `.mov`：
    - npm 包用户改产物 `lib/client.js`（桌面端如需再改 `runtime/electron-helper/shared-core.js`）
@@ -192,7 +192,7 @@ $DSH_HOME/dsh-pet/pet/
 ## 🗑️ 卸载
 
 ```sh
-dsh plugin --profile web remove dsh-pet
+dsh plugin --profile web remove @btsd321/dsh-pet
 ```
 
 插件在本机落下的全部位置（设置页「卸载与存储」区块也列出这些，且路径按你的机器实时解析）：
@@ -210,10 +210,10 @@ dsh plugin --profile web remove dsh-pet
 宠物实际运行在 DSH Web 界面中的样子：
 
 <p>
-  <img src="https://raw.githubusercontent.com/PC2005-cloud/dsh-pet/main/assets/screenshots/dsh-pet-running-1.png" width="380" alt="dsh-pet running in DSH Web UI 1" title="dsh-pet running in DSH Web UI 1">
-  <img src="https://raw.githubusercontent.com/PC2005-cloud/dsh-pet/main/assets/screenshots/dsh-pet-running-2.png" width="380" alt="dsh-pet running in DSH Web UI 2" title="dsh-pet running in DSH Web UI 2">
-  <img src="https://raw.githubusercontent.com/PC2005-cloud/dsh-pet/main/assets/screenshots/dsh-pet-running-7.png" width="380" alt="dsh-pet running in DSH Web UI 7" title="dsh-pet running in DSH Web UI 7">
-  <img src="https://raw.githubusercontent.com/PC2005-cloud/dsh-pet/main/assets/screenshots/dsh-pet-running-8.png" width="380" alt="dsh-pet running in DSH Web UI 8" title="dsh-pet running in DSH Web UI 8">
+  <img src="https://raw.githubusercontent.com/btsd321/dsh-pet/main/assets/screenshots/dsh-pet-running-1.png" width="380" alt="dsh-pet running in DSH Web UI 1" title="dsh-pet running in DSH Web UI 1">
+  <img src="https://raw.githubusercontent.com/btsd321/dsh-pet/main/assets/screenshots/dsh-pet-running-2.png" width="380" alt="dsh-pet running in DSH Web UI 2" title="dsh-pet running in DSH Web UI 2">
+  <img src="https://raw.githubusercontent.com/btsd321/dsh-pet/main/assets/screenshots/dsh-pet-running-7.png" width="380" alt="dsh-pet running in DSH Web UI 7" title="dsh-pet running in DSH Web UI 7">
+  <img src="https://raw.githubusercontent.com/btsd321/dsh-pet/main/assets/screenshots/dsh-pet-running-8.png" width="380" alt="dsh-pet running in DSH Web UI 8" title="dsh-pet running in DSH Web UI 8">
 </p>
 
 ## 🎬 效果预览
@@ -221,12 +221,12 @@ dsh plugin --profile web remove dsh-pet
 > 动画为透明背景；GIF 预览中透明部分显示为页面底色，实际播放为透明。
 
 <p>
-  <img src="https://raw.githubusercontent.com/PC2005-cloud/dsh-pet/main/dsh-pet/assets/preview/daiji-huxi-xiuxian.gif" width="160" alt="待机呼吸休闲" title="待机呼吸休闲">
-  <img src="https://raw.githubusercontent.com/PC2005-cloud/dsh-pet/main/dsh-pet/assets/preview/dongzhangxiwang.gif" width="160" alt="东张西望" title="东张西望">
-  <img src="https://raw.githubusercontent.com/PC2005-cloud/dsh-pet/main/dsh-pet/assets/preview/yuandi-piaofu-tabu.gif" width="160" alt="原地漂浮踏步" title="原地漂浮踏步">
-  <img src="https://raw.githubusercontent.com/PC2005-cloud/dsh-pet/main/dsh-pet/assets/preview/yuandi-xiaoqi-chenmian.gif" width="160" alt="原地小憩沉眠" title="原地小憩沉眠">
-  <img src="https://raw.githubusercontent.com/PC2005-cloud/dsh-pet/main/dsh-pet/assets/preview/dianji-huiying-kaixin-yuedong.gif" width="160" alt="点击回应 - 开心跃动" title="点击回应 - 开心跃动">
-  <img src="https://raw.githubusercontent.com/PC2005-cloud/dsh-pet/main/dsh-pet/assets/preview/beishubiao-tuozhuai-xuankong-fankui.gif" width="160" alt="被鼠标拖拽悬空反馈" title="被鼠标拖拽悬空反馈">
+  <img src="https://raw.githubusercontent.com/btsd321/dsh-pet/main/dsh-pet/assets/preview/daiji-huxi-xiuxian.gif" width="160" alt="待机呼吸休闲" title="待机呼吸休闲">
+  <img src="https://raw.githubusercontent.com/btsd321/dsh-pet/main/dsh-pet/assets/preview/dongzhangxiwang.gif" width="160" alt="东张西望" title="东张西望">
+  <img src="https://raw.githubusercontent.com/btsd321/dsh-pet/main/dsh-pet/assets/preview/yuandi-piaofu-tabu.gif" width="160" alt="原地漂浮踏步" title="原地漂浮踏步">
+  <img src="https://raw.githubusercontent.com/btsd321/dsh-pet/main/dsh-pet/assets/preview/yuandi-xiaoqi-chenmian.gif" width="160" alt="原地小憩沉眠" title="原地小憩沉眠">
+  <img src="https://raw.githubusercontent.com/btsd321/dsh-pet/main/dsh-pet/assets/preview/dianji-huiying-kaixin-yuedong.gif" width="160" alt="点击回应 - 开心跃动" title="点击回应 - 开心跃动">
+  <img src="https://raw.githubusercontent.com/btsd321/dsh-pet/main/dsh-pet/assets/preview/beishubiao-tuozhuai-xuankong-fankui.gif" width="160" alt="被鼠标拖拽悬空反馈" title="被鼠标拖拽悬空反馈">
 </p>
 
 全部动画见仓库：`dsh-pet/assets/webm/`（VP9-alpha，唯一发布格式）。
@@ -240,8 +240,8 @@ dsh plugin --profile web remove dsh-pet
 AI 生成动画的配方     源视频 → 透明动画的管线    运行在 DSH 里的宠物
 ```
 
-- 仓库：[PC2005-cloud/dsh-pet](https://github.com/PC2005-cloud/dsh-pet)
-- 素材生成提示词：[prompts/](https://github.com/PC2005-cloud/dsh-pet/tree/main/prompts)（10 秒动作提示词 + 系统通知图标提示词，可直接喂给豆包）
+- 仓库：[btsd321/dsh-pet](https://github.com/btsd321/dsh-pet)
+- 素材生成提示词：[prompts/](https://github.com/btsd321/dsh-pet/tree/main/prompts)（10 秒动作提示词 + 系统通知图标提示词，可直接喂给豆包）
 
 ## 🔎 发现更多 DSH 插件
 

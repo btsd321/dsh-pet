@@ -1,14 +1,14 @@
 # dsh-pet 🐾
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/dsh-pet"><img alt="npm version" src="https://img.shields.io/npm/v/dsh-pet?label=npm&color=blue"></a>
-  <a href="https://www.npmjs.com/package/dsh-pet"><img alt="npm monthly downloads" src="https://img.shields.io/npm/dm/dsh-pet?label=%E6%9C%88%E4%B8%8B%E8%BD%BD&color=brightgreen"></a>
-  <a href="https://www.npmjs.com/package/dsh-pet"><img alt="total downloads" src="https://img.shields.io/npm/dt/dsh-pet?label=%E6%80%BB%E4%B8%8B%E8%BD%BD&color=success"></a>
-  <a href="https://github.com/PC2005-cloud/dsh-pet"><img alt="stars" src="https://img.shields.io/github/stars/PC2005-cloud/dsh-pet?style=social"></a>
-  <a href="https://github.com/PC2005-cloud/dsh-pet/blob/main/LICENSE"><img alt="license" src="https://img.shields.io/github/license/PC2005-cloud/dsh-pet?color=orange"></a>
+  <a href="https://www.npmjs.com/package/@btsd321/dsh-pet"><img alt="npm version" src="https://img.shields.io/npm/v/@btsd321/dsh-pet?label=npm&color=blue"></a>
+  <a href="https://www.npmjs.com/package/@btsd321/dsh-pet"><img alt="npm monthly downloads" src="https://img.shields.io/npm/dm/@btsd321/dsh-pet?label=%E6%9C%88%E4%B8%8B%E8%BD%BD&color=brightgreen"></a>
+  <a href="https://www.npmjs.com/package/@btsd321/dsh-pet"><img alt="total downloads" src="https://img.shields.io/npm/dt/@btsd321/dsh-pet?label=%E6%80%BB%E4%B8%8B%E8%BD%BD&color=success"></a>
+  <a href="https://github.com/btsd321/dsh-pet"><img alt="stars" src="https://img.shields.io/github/stars/btsd321/dsh-pet?style=social"></a>
+  <a href="https://github.com/btsd321/dsh-pet/blob/main/LICENSE"><img alt="license" src="https://img.shields.io/github/license/btsd321/dsh-pet?color=orange"></a>
   <a href="https://awesome-dsh-plugin.com"><img alt="awesome dsh plugin" src="https://awesome-dsh-plugin.com/badge.svg"></a>
-  <a href="https://github.com/PC2005-cloud/dsh-pet"><img alt="repo size" src="https://img.shields.io/github/repo-size/PC2005-cloud/dsh-pet"></a>
-  <a href="https://github.com/PC2005-cloud/dsh-pet/issues"><img alt="issues" src="https://img.shields.io/github/issues/PC2005-cloud/dsh-pet"></a>
+  <a href="https://github.com/btsd321/dsh-pet"><img alt="repo size" src="https://img.shields.io/github/repo-size/btsd321/dsh-pet"></a>
+  <a href="https://github.com/btsd321/dsh-pet/issues"><img alt="issues" src="https://img.shields.io/github/issues/btsd321/dsh-pet"></a>
   <img alt="platform" src="https://img.shields.io/badge/platform-DeepSeek%20Harness%20Web-8A2BE2">
   <img alt="assets" src="https://img.shields.io/badge/assets-dynamic%20animations-ff69b4">
 </p>
@@ -39,12 +39,12 @@ npm install -g @deepseek-ai/dsh pnpm
 dsh --version   # 验证 dsh 命令可用
 
 # ③ 安装本插件
-dsh plugin --profile web add dsh-pet
+dsh plugin --profile web add @btsd321/dsh-pet
 ```
 
 重启 `dsh web`，宠物出现在界面右上角（默认配置角落，可在设置页修改）。
 
-> **兼容性**：本插件当前在 dsh **`0.1.5-rc.1`** 下开发并测试（`dsh --version` 可查看你的版本）。建议使用相同版本；其他版本如遇问题欢迎反馈。
+> **兼容性**：本插件当前在 dsh **`0.2.0-rc.1`** 下开发并测试（`dsh --version` 可查看你的版本）。建议使用相同版本；其他版本如遇问题欢迎反馈。
 
 ### 从源码安装（clone 本仓库后）
 
@@ -52,7 +52,7 @@ dsh plugin --profile web add dsh-pet
 
 ```sh
 # ① clone 本仓库，进入插件目录
-git clone https://github.com/PC2005-cloud/dsh-pet.git
+git clone https://github.com/btsd321/dsh-pet.git
 cd dsh-pet/dsh-pet
 
 # ② 安装依赖
@@ -454,7 +454,7 @@ python encode_thumbs.py      # 转码 640×360 播放变体 → step04/
 
 插件默认只发布 `.webm`（VP9-alpha），Safari/WKWebView 不认 webm alpha（黑底），macOS 需要在 GitHub Release 下载官方转码的 **HEVC-with-Alpha `.mov`** 素材使用，三步：
 
-1. **下载**：<https://github.com/PC2005-cloud/dsh-pet/releases/tag/assets-mov>（固定 tag，保持最新；zip 解压后文件名与 webm 一一对应）
+1. **下载**：<https://github.com/btsd321/dsh-pet/releases/tag/assets-mov>（固定 tag，保持最新；zip 解压后文件名与 webm 一一对应）
 2. **放入**：`.mov` 文件放进 `$DSH_HOME/dsh-pet/main-animation/mov/`（pet pack 宠物则是 `pet/<种类名>-animation/mov/`）
 3. **改变量**：搜 `ANIMATION_EXT`，把 `.webm` 改为 `.mov`——npm 包改产物 `lib/client.js`（桌面端如需再改 `runtime/electron-helper/shared-core.js`）；自构建改源码 `src/shared/constants.ts` 后重新构建
 
