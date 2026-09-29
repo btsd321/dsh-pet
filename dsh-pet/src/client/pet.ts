@@ -93,11 +93,11 @@ const css = [
   // 统一右键菜单样式（与桌面注入同一份 MENU_CSS）
   MENU_CSS,
 ].join('\n');
-const cssTag = 'dsh-pet/style.css';
+const cssTag = '@btsd321/dsh-pet/style.css';
 function injectCss(): void {
   if (typeof document !== 'undefined' && document.querySelector('style[data-plugin-css="' + cssTag + '"]') === null) {
     const tag = document.createElement('style');
-    tag.dataset.plugin = 'dsh-pet';
+    tag.dataset.plugin = '@btsd321/dsh-pet';
     tag.dataset.pluginCss = cssTag;
     tag.textContent = css;
     document.head.appendChild(tag);

@@ -76,8 +76,8 @@ function injectChatCss(): void {
   if (chatCssInjected || typeof document === 'undefined') return;
   chatCssInjected = true;
   const tag = document.createElement('style');
-  tag.dataset.plugin = 'dsh-pet';
-  tag.dataset.pluginCss = 'dsh-pet/chat';
+  tag.dataset.plugin = '@btsd321/dsh-pet';
+  tag.dataset.pluginCss = '@btsd321/dsh-pet/chat';
   tag.textContent = CHAT_CSS;
   document.head.appendChild(tag);
 }

@@ -56,10 +56,10 @@ const bubbleCss = [
 
 /** 只注入一次 */
 function injectBubbleCss(): void {
-  if (typeof document !== 'undefined' && document.querySelector('style[data-plugin-css="dsh-pet/bubble"]') === null) {
+  if (typeof document !== 'undefined' && document.querySelector('style[data-plugin-css="@btsd321/dsh-pet/bubble"]') === null) {
     const tag = document.createElement('style');
-    tag.dataset.plugin = 'dsh-pet';
-    tag.dataset.pluginCss = 'dsh-pet/bubble';
+    tag.dataset.plugin = '@btsd321/dsh-pet';
+    tag.dataset.pluginCss = '@btsd321/dsh-pet/bubble';
     tag.textContent = bubbleCss;
     document.head.appendChild(tag);
   }

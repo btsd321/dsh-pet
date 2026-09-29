@@ -98,10 +98,10 @@ let memeCssInjected = false;
 export function injectMemeBubbleCss(): void {
   if (memeCssInjected || typeof document === 'undefined') return;
   memeCssInjected = true;
-  if (document.querySelector('style[data-plugin-css="dsh-pet/meme-bubble"]') !== null) return;
+  if (document.querySelector('style[data-plugin-css="@btsd321/dsh-pet/meme-bubble"]') !== null) return;
   const tag = document.createElement('style');
-  tag.dataset.plugin = 'dsh-pet';
-  tag.dataset.pluginCss = 'dsh-pet/meme-bubble';
+  tag.dataset.plugin = '@btsd321/dsh-pet';
+  tag.dataset.pluginCss = '@btsd321/dsh-pet/meme-bubble';
   tag.textContent = MEME_BUBBLE_CSS;
   document.head.appendChild(tag);
 }
